@@ -28,8 +28,8 @@
     <div>
       <p>제이쿼리</p>
     </div>
-    <!-- <button id="slideleft">slideleft</button>
-    <button id="slideright">slideright</button> -->
+    <button id="slideleft">slideleft</button>
+    <button id="slideright">slideright</button>
     <button id="slide">slidetoggle</button>
 
     <script>
@@ -41,9 +41,9 @@
       });
       $("#slide").click(function () {
         if ($("p").width() > 0) {
-          $("p").css({ width: "0" }, 1000);
+          $("p").css("width", "0");
         } else {
-          $("p").css({ width: "100%" }, 1000);
+          $("p").css("width", "100%");
         }
       });
     </script>
