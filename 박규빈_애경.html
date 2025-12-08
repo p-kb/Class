@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>애경</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      section {
+        width: 1400px;
+        margin: 50px auto;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      .tit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 68px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .tit h1 {
+        font-size: 46px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: -3px;
+        line-height: 1.26;
+      }
+      .tit .btn {
+        display: flex;
+        gap: 58px;
+        text-align: right;
+      }
+      .tit .btn li a {
+        font-size: 15px;
+        color: rgba(22, 22, 22, 0.6);
+        font-weight: 500;
+      }
+      .tit .btn li a span {
+        font-size: 20px;
+        color: #161616;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+      .tit .btn li a span.on {
+        text-decoration: underline;
+        text-underline-offset: 6px;
+      }
+      .con {
+        position: relative;
+      }
+      .con li {
+        position: absolute;
+        width: 1400px;
+        display: none;
+      }
+      .con li.on {
+        display: block;
+      }
+      .con li .txt {
+        position: relative;
+      }
+      .con li .txt p {
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: -1px;
+        margin-bottom: 80px;
+      }
+      .con li .txt a {
+        position: absolute;
+        top: 200px;
+        height: 48px;
+        padding: 0 30px;
+        background-color: #f8f8f8e6;
+        border-radius: 50px;
+        line-height: 48px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .con li .txt a:hover {
+        background-image: linear-gradient(to top, #f5e7f0, #fad7d7);
+      }
+      .con li .txt a img {
+        margin-left: 20px;
+      }
+      .con li > p {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .con li > p img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="tit">
+        <h1>
+          Sustainable<br />
+          Love & Respect
+        </h1>
+        <ul class="btn">
+          <li>
+            <a href="#">Environmental<br /><span>환경</span></a>
+          </li>
+          <li>
+            <a href="#">Social<br /><span>사회</span></a>
+          </li>
+          <li>
+            <a href="#">Governance<br /><span>지배구조</span></a>
+          </li>
+        </ul>
+      </div>
+      <ul class="con">
+        <li>
+          <div class="txt">
+            <p>애경산업은 지속가능한 환경을 위해<br />책임을 다하겠습니다.</p>
+            <a href="#">
+              바로가기
+              <img
+                src="https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp"
+                alt=""
+              />
+            </a>
+          </div>
+          <p>
+            <img
+              src="https://www.aekyung.co.kr/img/front/main/mo_main_tab01.png"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <div class="txt">
+            <p>
+              애경산업의 노력은<br />
+              임직원과 협력사, 지역사회<br />
+              그리고 고객이 함께하는 향기로운 동행이 될 것입니다.
+            </p>
+            <a href="#">
+              바로가기
+              <img
+                src="https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp"
+                alt=""
+              />
+            </a>
+          </div>
+          <p>
+            <img
+              src="https://www.aekyung.co.kr/img/front/main/mo_main_tab02.png"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <div class="txt">
+            <p>투명하고 건전한 기업 활동을 이어나가겠습니다.</p>
+            <a href="#">
+              바로가기
+              <img
+                src="https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp"
+                alt=""
+              />
+            </a>
+          </div>
+          <p>
+            <img
+              src="https://www.aekyung.co.kr/img/front/main/mo_main_tab03.png"
+              alt=""
+            />
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <script>
+      let btn = document.querySelectorAll(".btn li a");
+      let con = document.querySelectorAll(".con li");
+
+      btn[0].querySelector("span").classList.add("on");
+      con[0].classList.add("on");
+
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          ar.forEach(function (v) {
+            v.querySelector("span").classList.remove("on");
+          });
+          this.querySelector("span").classList.add("on");
+          con.forEach(function (v) {
+            v.classList.remove("on");
+          });
+          con[k].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

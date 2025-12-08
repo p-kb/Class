@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웰컴복지재단</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
+          format("woff2");
+        font-weight: 100;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2")
+          format("woff2");
+        font-weight: 200;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2")
+          format("woff2");
+        font-weight: 300;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
+          format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2")
+          format("woff2");
+        font-weight: 500;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2")
+          format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
+          format("woff2");
+        font-weight: 700;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2")
+          format("woff2");
+        font-weight: 800;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
+          format("woff2");
+        font-weight: 900;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Welcome";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-display: swap;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      section {
+        width: 100%;
+        font-family: "Pretendard";
+      }
+      .btnwrap {
+        width: 100%;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .btnwrap .btn {
+        max-width: 1500px;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+      }
+      .btnwrap .btn li {
+        flex: 1;
+        height: 80px;
+        text-align: center;
+        line-height: 80px;
+      }
+      .btnwrap .btn li a {
+        display: block;
+        height: 80px;
+        box-sizing: border-box;
+        position: relative;
+        font-size: 18px;
+        color: #000;
+        font-weight: 600;
+      }
+      .btnwrap .btn li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: #000;
+        transform: scaleX(0);
+        transition: 0.35s;
+      }
+      .btnwrap .btn li a:hover::after {
+        transform: scaleX(1);
+      }
+      .btnwrap .btn li a.on {
+        color: #ea002c;
+      }
+      .btnwrap .btn li a.on::after {
+        background: #ea002c;
+        transform: scale(1);
+      }
+      .con {
+        margin-top: 140px;
+        text-align: center;
+      }
+      .con > li {
+        text-align: center;
+        display: none;
+      }
+      .con > li.on {
+        display: block;
+      }
+      .con > li h1 {
+        font-family: "Welcome";
+        font-size: 50px;
+        margin-bottom: 30px;
+      }
+      .con > li .btn2 {
+        display: flex;
+        justify-content: center;
+      }
+      .con > li .btn2 li::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 4px;
+        background: #cccccc;
+        border-radius: 50%;
+      }
+      .con > li .btn2 li:first-child::before {
+        content: none;
+      }
+      .con > li .btn2 li {
+        position: relative;
+        padding: 0 21px;
+      }
+      .con > li .btn2 li a {
+        font-size: 20px;
+        color: #666666;
+        font-weight: 600;
+      }
+      .con > li .btn2 li a.on {
+        color: #ea002c;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="btnwrap">
+        <ul class="btn">
+          <li><a href="#">아동복지사업</a></li>
+          <li><a href="#">청소년복지사업</a></li>
+          <li><a href="#">노인복지사업</a></li>
+          <li><a href="#">장애인복지사업</a></li>
+          <li><a href="#">사회봉사사업</a></li>
+        </ul>
+      </div>
+      <ul class="con">
+        <li>
+          <h1>아동복지사업</h1>
+          <ul class="btn2">
+            <li><a href="#">지역아동센터사업</a></li>
+            <li><a href="#">우리동네키움센터사업</a></li>
+            <li><a href="#">어린이집사업</a></li>
+          </ul>
+        </li>
+        <li>
+          <h1>청소년복지사업</h1>
+          <ul class="btn2">
+            <li><a href="#">청소년복지시설사업</a></li>
+            <li><a href="#">웰컴투모로우사업</a></li>
+          </ul>
+        </li>
+        <li>
+          <h1>노인복지사업</h1>
+          <ul class="btn2">
+            <li><a href="#">행복빨래방사업</a></li>
+            <li><a href="#">주거환경개선사업</a></li>
+          </ul>
+        </li>
+        <li>
+          <h1>장애인복지사업</h1>
+        </li>
+        <li>
+          <h1>사회봉사사업</h1>
+        </li>
+      </ul>
+    </section>
+
+    <script>
+      let btn = document.querySelectorAll(".btn li a");
+      let con = document.querySelectorAll(".con > li");
+      let btn2fir = con[0].querySelectorAll(".btn2 li a");
+
+      btn[0].classList.add("on");
+      con[0].classList.add("on");
+      btn2fir[0].classList.add("on");
+
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          ar.forEach(function (v) {
+            v.classList.remove("on");
+          });
+          this.classList.add("on");
+          con.forEach(function (v) {
+            v.classList.remove("on");
+          });
+          con[k].classList.add("on");
+
+          let btn2 = con[k].querySelectorAll(".btn2 li a");
+
+          btn2[0].classList.add("on");
+
+          btn2.forEach(function (v, k, ar) {
+            v.onclick = function (e) {
+              e.preventDefault();
+              ar.forEach(function (v) {
+                v.classList.remove("on");
+              });
+              this.classList.add("on");
+            };
+          });
+        };
+      });
+    </script>
+  </body>
+</html>
